@@ -39,23 +39,27 @@
           <a class="brand" href="<?php echo base_url(); ?>"><?php echo $this->config->item('judul_pendek'); ?></a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="<?php echo base_url(); ?>"><i class="icon-home icon-white"></i> Beranda</a></li>
+              <li><a href="<?php echo base_url(); ?>"><i class="icon-home icon-white"></i> Beranda</a></li>
               <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-book icon-white"></i> Master Data <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#"><i class="icon-tag"></i> Master Data</a></li>
+                  <li><a href="<?php echo base_url(); ?>index.php/dashboard_administrator/makanan"><i class="icon-tag"></i> Makanan</a></li>
+                  <li><a href="<?php echo base_url(); ?>index.php/dashboard_administrator/minuman"><i class="icon-tag"></i> Minuman</a></li>
+                  <li><a href="<?php echo base_url(); ?>index.php/dashboard_administrator/meja"><i class="icon-tag"></i> Meja</a></li>
+                  <li><a href="<?php echo base_url(); ?>index.php/dashboard_administrator/pengguna"><i class="icon-tag"></i> Pengguna</a></li>
                 </ul>
               </li>
+              <li><a href="<?php echo base_url(); ?>index.php/dashboard_administrator/pesanan"><i class="icon-book icon-white"></i> Pesanan</a></li>
             </ul>
             <div class="btn-group pull-right">
-			  <button class="btn btn-primary"><i class="icon-user icon-white"></i> <?php echo $this->session->userdata('nama'); ?></button>
+			  <button class="btn btn-primary"><i class="icon-user icon-white"></i> <?php echo $this->session->userdata('useralias'); ?></button>
 			  <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
 				<span class="caret"></span>
 			  </button>
 			  <ul class="dropdown-menu">
-				<li><a href="<?php echo base_url(); ?>app/change_password"><i class="icon-wrench"></i> Pengaturan Akun</a></li>
-				<li><a href="<?php echo base_url(); ?>manage_user"><i class="icon-tasks"></i> Manajemen User</a></li>
-				<li><a href="<?php echo base_url(); ?>app/logout"><i class="icon-off"></i> Log Out</a></li>
+				<li><a href="<?php echo base_url(); ?>index.php/dashboard_administrator/pengguna/password"><i class="icon-wrench"></i> Pengaturan Akun</a></li>
+				<li><a href="<?php echo base_url(); ?>index.php/dashboard_administrator/pengguna"><i class="icon-tasks"></i> Manajemen User</a></li>
+				<li><a href="<?php echo base_url(); ?>index.php/app/logout"><i class="icon-off"></i> Log Out</a></li>
 			  </ul>
 			</div>
           </div><!--/.nav-collapse -->

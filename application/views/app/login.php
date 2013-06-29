@@ -40,11 +40,19 @@
                 </ul>
               </li>
             </ul>
-			<?php echo form_open('app/index','class="navbar-form pull-right"'); ?>
+            <?php if($this->session->userdata('userlog')){ ?>
+            <div class="btn-group pull-right">
+			  <a href="<?php echo base_url(); ?>index.php/dashboard_administrator"><button class="btn btn-primary">Dashboard</button></a>
+			  <a href="<?php echo base_url(); ?>index.php/app/logout" ><button class="btn btn-primary"><i class="icon-user icon-white"></i> Logout</button></a>
+			</div>
+            <?php }else{ ?>
+			<?php echo form_open('app/index','class="navbar-form pull-right"'); echo form_hidden('login','ya'); ?>
+            	
               <input class="span2" type="text" name="username" placeholder="Username..." value="<?php echo set_value('username'); ?>">
               <input class="span2" type="password" name="password" placeholder="Password...">
               <button type="submit" class="btn btn-primary "><i class="icon-share icon-white"></i> Log in</button>
            <?php echo form_close(); ?>
+           <?php } ?>           
           </div><!--/.nav-collapse -->
         </div>
       </div>
@@ -68,7 +76,7 @@
 	<?php } ?>
       <div class="hero-unit">
         <h2>Selamat Datang di <?php echo $this->config->item('judul_lengkap').' '.$this->config->item('instansi'); ?></h2>
-        <p><?php echo $this->config->item('judul_lengkap').' '.$this->config->item('instansi'); ?> merupakan sebuah aplikasi untuk melakukan manajemen pesanan dan POS restoran di <?=$this->config->item('instansi');?>. Silahkan masukkan username dan password anda untuk mulai melakukan manajemen atau pengolahan data sesuai dengan hak akses yang anda miliki.</p>
+        <p><?php echo $this->config->item('judul_lengkap').' '.$this->config->item('instansi'); ?> merupakan sebuah aplikasi untuk melakukan manajemen pesanan dan POS restoran di <?php $this->config->item('instansi');?>. Silahkan masukkan username dan password anda untuk mulai melakukan manajemen atau pengolahan data sesuai dengan hak akses yang anda miliki.</p>
         <p><a href="http://fb.me/khaer.ansori.nad/" class="btn btn-primary btn-large">Meet the Creator <i class="icon-circle-arrow-right icon-white"></i> </a></p>
       </div>
 
