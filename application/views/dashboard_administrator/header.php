@@ -43,13 +43,12 @@
               <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-book icon-white"></i> Master Data <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="<?php echo base_url(); ?>index.php/dashboard_administrator/makanan"><i class="icon-tag"></i> Makanan</a></li>
-                  <li><a href="<?php echo base_url(); ?>index.php/dashboard_administrator/minuman"><i class="icon-tag"></i> Minuman</a></li>
-                  <li><a href="<?php echo base_url(); ?>index.php/dashboard_administrator/meja"><i class="icon-tag"></i> Meja</a></li>
-                  <li><a href="<?php echo base_url(); ?>index.php/dashboard_administrator/pengguna"><i class="icon-tag"></i> Pengguna</a></li>
+                  <li><a href="<?php echo base_url(); ?>index.php/dashboard_administrator/makanan"><i class="icon-fire"></i> Makanan</a></li>
+                  <li><a href="<?php echo base_url(); ?>index.php/dashboard_administrator/minuman"><i class="icon-glass"></i> Minuman</a></li>
+                  <li><a href="<?php echo base_url(); ?>index.php/dashboard_administrator/meja"><i class="icon-hdd"></i> Meja</a></li>
                 </ul>
               </li>
-              <li><a href="<?php echo base_url(); ?>index.php/dashboard_administrator/pesanan"><i class="icon-book icon-white"></i> Pesanan</a></li>
+              <li><a href="<?php echo base_url(); ?>index.php/dashboard_administrator/pesanan"><i class="icon-check icon-white"></i> Pesanan</a></li>
             </ul>
             <div class="btn-group pull-right">
 			  <button class="btn btn-primary"><i class="icon-user icon-white"></i> <?php echo $this->session->userdata('useralias'); ?></button>
